@@ -1,0 +1,158 @@
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--violet);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 75rem;
+}
+
+header{
+    margin-bottom: 3rem;
+}
+
+.logo{
+    width: 40%;
+    max-width: 13rem;
+}
+
+.page-img{
+    margin-bottom: 3rem;
+}
+
+.page-content{
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.content-paragraph{
+    color: rgba(255, 255, 255, 0.85);;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--violet);
+    background-color: #fff;
+    display: inline-block;
+    padding: .5rem 5rem;
+    border-radius: 10vw;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
+    margin-bottom: 3rem;
+    transition: .3s;
+}
+
+.btn:hover,
+.btn:focus-within{
+    background-color: var(--magenta);
+    outline-color: var(--magenta);
+}
+
+
+.social-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.social-logo{
+    color: white;
+    font-size: 2rem;
+}
+
+.social-links li a:hover .social-logo,
+.social-links li a:focus-within{
+    color: var(--magenta);
+    outline-color: var(--magenta);
+    outline-offset: 5px;
+}
+
+.social-links li:nth-of-type(2){
+    margin-left: .75rem;
+    margin-right: .75rem;
+}
+
+@media(min-width:50rem){
+    body{
+        background-image: url(images/bg-desktop.svg);
+        margin: 0 2rem;
+        min-height: 100vh;
+    }
+
+    main{
+        display: flex;
+        gap: 2rem;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .page-img,
+    .page-content{
+        flex: 1;
+        text-align: left;
+    }
+
+    .btn{
+        padding: .5rem 3.5rem;
+    }
+
+    .social-links{
+        justify-content: flex-end;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
